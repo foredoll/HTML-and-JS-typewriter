@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>repl.it</title>
+      <link href="style.css" rel="stylesheet" type="text/css" />
+   </head>
+   <body>
+      <p id="youHTMLtagID" class="youHTMLtagID"></p>
+      <script>
+         function write(text, time, number, id) {
+         var i = number;
+         var thingy = text.split("");
+         var area = document.getElementById(id);
+         if (i < text.length) {
+         area.innerHTML += thingy[i];
+         i ++;
+         var t = setTimeout(write, time, text, time, i, id);
+         } else {
+         return 0;
+         }
+         }
+         var waitTime = 60;
+         var id = 'youHTMLtagID';
+         
+         write("Hello World!", waitTime, 0, id);
+         
+      </script>
+   </body>
+</html>
